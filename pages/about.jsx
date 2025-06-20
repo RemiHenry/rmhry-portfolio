@@ -1,6 +1,6 @@
 import Head from "next/head";
 import style from "../styles/About.module.css";
-import remi from "../images/remi.jpg";
+import remi from "../images/remi.png";
 import Image from "next/image";
 
 export default function About() {
