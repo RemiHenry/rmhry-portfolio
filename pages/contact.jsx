@@ -4,9 +4,9 @@ import React from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const serviceKey = process.env.SERVICE_KEY || "";
-  const templateKey = process.env.TEMPLATE_KEY || "";
-  const publicKey = process.env.PUBLIC_KEY || "";
+  const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY || "";
+  const templateKey = process.env.NEXT_PUBLIC_TEMPLATE_KEY || "";
+  const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY || "";
 
   const [formData, setFormData] = React.useState({
     name: "",
