@@ -51,7 +51,7 @@ export default function About() {
             <br />
             Beyond code, I care deeply about the user experience, efficient
             product workflows, and bridging the gap between technical execution
-            and intuitive design. I'm equally comfortable writing clean
+            and intuitive design. I&apos;m equally comfortable writing clean
             JavaScript as I am designing in Figma, and I thrive in
             collaborative, agile environments.
             <br />
