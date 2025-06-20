@@ -1,7 +1,7 @@
 import Head from "next/head";
 import style from "../styles/Projects.module.css";
 
-export default function Work() {
+export default function Projects() {
   return (
     <div>
       <Head>

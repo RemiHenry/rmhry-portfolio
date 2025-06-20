@@ -1,10 +1,10 @@
 .layout {
-  height: 100px;
+  height: 80px;
   width: 100%;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   display: grid;
-  grid-template-columns: 1fr 200px 200px auto;
+  grid-template-columns: 1fr 200px 200px 200px auto;
   grid-template-rows: 1fr;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.4);
@@ -32,4 +32,5 @@
 .option {
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  font-size: 1.2rem;
 }

@@ -10,13 +10,9 @@
 
   .content {
     width: 60%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    text-align: center;
 
     .description {
       text-align: justify;

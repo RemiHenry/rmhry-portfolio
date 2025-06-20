@@ -16,6 +16,9 @@ const Layout = () => {
         <Link href="/about" className={style.option}>
           About Me
         </Link>
+        <Link href="/experiences" className={style.option}>
+          Experiences
+        </Link>
         <Link href="/projects" className={style.option}>
           Projects
         </Link>
