@@ -1,0 +1,35 @@
+.layout {
+  height: 100px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  display: grid;
+  grid-template-columns: 1fr 200px 200px auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  width: calc(100% - 10px);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  margin: 5px;
+}
+
+.logo {
+  color: #00edfe;
+}
+
+.option {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
