@@ -4,7 +4,6 @@ import React from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  console.log(process.env);
   const serviceKey = process.env.SERVICE_KEY || "";
   const templateKey = process.env.TEMPLATE_KEY || "";
   const publicKey = process.env.PUBLIC_KEY || "";
@@ -42,7 +41,6 @@ export default function Contact() {
     }
 
     try {
-      console.log(publicKey);
       await emailjs.send(serviceKey, templateKey, formData, publicKey);
       setSuccessMessage("Success");
       setFormData({ name: "", company: "", email: "", message: "" });
