@@ -1,6 +1,6 @@
 .contact-form-container {
   width: 100%;
-  height: calc(100vh - 44px);
+  height: calc(100vh - 64px);
   padding: 2rem;
   display: flex;
   justify-content: center;

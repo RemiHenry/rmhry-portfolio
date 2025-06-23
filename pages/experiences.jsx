@@ -29,18 +29,6 @@ export default function Experiences() {
             development workflows and deployment efficiency.
             <br />
             <br />
-            📍 Nema Studio – Software Engineer & Chief Design Officer (Sep 2021
-            – Aug 2024)
-            <br />
-            As Chief Design Officer at Nema Studio, I led the design vision and
-            user experience of our flagship web application. I created and
-            iterated on mockups using Figma, ensuring intuitive navigation and
-            appealing visuals. On the development side, I engineered Svelte
-            components integrating an audio engine compiled in WebAssembly
-            (developed in Rust), combining high performance with elegant user
-            interactions.
-            <br />
-            <br />
             📍 Listn – Front-End Developer Intern (Apr 2022 – Jul 2022)
             <br />
             During my internship at Listn, I enhanced the web app&apos;s design
