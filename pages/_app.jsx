@@ -4,7 +4,6 @@ import "../styles/globals.css";
 import bg from "../images/bg.png";
 
 function MyApp({ Component, pageProps }) {
-  console.log(location.pathname);
   return (
     <div
       style={{
