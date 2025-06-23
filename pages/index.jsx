@@ -228,7 +228,7 @@ export default function Home() {
 
       <div id="contact" className={style["contact-form-container"]}>
         <div className={style["contact-header"]}>
-          <h1 className={style["contact-title"]}>LET'S MAKE</h1>
+          <h1 className={style["contact-title"]}>LET&apos;S MAKE</h1>
           <h1 className={style["contact-title"]}>IT HAPPEN</h1>
         </div>
         <form className={style["contact-form"]} onSubmit={handleSubmit}>
