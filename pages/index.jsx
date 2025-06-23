@@ -19,7 +19,7 @@ export default function Home() {
           href="https://fonts.cdnfonts.com/css/janger"
           rel="stylesheet"
         ></link>
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
       </Head>
       <div className={style.container}>
         <h1 className={`${style.title} ${janger.className}`}>Remi Henry</h1>
