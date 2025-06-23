@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={style.container}>
       <section>
         <a href="mailto:remi.st@outlook.fr" className={style.mail}>
-          <Icon icon="mdi:email" width="20" height="20" color="white" />
+          <Icon icon="mdi:email" width="20" height="20" color="black" />
           remi.st@outlook.fr
         </a>
       </section>
@@ -18,14 +18,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon icon="mdi:github" width="24" height="24" color="white" />
+            <Icon icon="mdi:github" width="24" height="24" color="black" />
           </Link>
           <Link
             href="https://www.linkedin.com/in/remi-henry/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon icon="mdi:linkedin" width="24" height="24" color="white" />
+            <Icon icon="mdi:linkedin" width="24" height="24" color="black" />
           </Link>
         </div>
         <p className={style.rights}>
@@ -35,7 +35,7 @@ const Footer = () => {
       </section>
       <section>
         <p className={style.phone}>
-          <Icon icon="mdi:phone" width="20" height="20" color="white" />
+          <Icon icon="mdi:phone" width="20" height="20" color="black" />
           (+33) 06.82.63.88.39
         </p>
       </section>
