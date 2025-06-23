@@ -25,9 +25,9 @@ export default function Projects() {
             developed by a team of six students, including myself, with the
             ambitious goal of creating a next-generation Digital Audio
             Workstation (DAW). Our vision was to design a tool that would bring
-            live collaboration to music production—a "Figma for audio"—allowing
-            multiple users to compose, edit, and mix music together in real time
-            via the browser.
+            live collaboration to music production—a &quot;Figma for
+            audio&quot;—allowing multiple users to compose, edit, and mix music
+            together in real time via the browser.
             <br />
             I led the UI/UX design efforts, producing detailed mockups and
             interaction flows using Figma to ensure a smooth, creative user
@@ -45,17 +45,17 @@ export default function Projects() {
             the impact of our work both technically and creatively.
             <br />
             <br />
-            📍 L’aller Simple – Website Design & Development Project
+            📍 L&apos;aller Simple – Website Design & Development Project
             <br />
             For this personal project, I designed, developed, and deployed a
-            complete website for L’aller Simple, a rural holiday cottage. I
+            complete website for L&apos;aller Simple, a rural holiday cottage. I
             began by creating user-focused mockups in Figma to reflect the cozy,
             inviting atmosphere of the cottage. I then implemented the front-end
             using responsive web technologies, ensuring a smooth experience
             across all devices. The site includes a reservation feature,
             enabling visitors to book their stays directly online, and also acts
-            as a landing page to showcase the property’s key features and visual
-            identity. This project demonstrated my ability to manage an
+            as a landing page to showcase the property&apos;s key features and
+            visual identity. This project demonstrated my ability to manage an
             end-to-end web solution—from design to deployment—while balancing
             functionality and aesthetic appeal.
           </p>
