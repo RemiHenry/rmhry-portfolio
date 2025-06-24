@@ -18,8 +18,8 @@
     flex-direction: row;
     gap: 2rem;
     align-items: center;
-    border-radius: 10rem;
-    padding: 8px 20px;
+    border-radius: 12px;
+    padding: 8px 16px;
 
     .option {
       background-color: transparent;
@@ -72,4 +72,10 @@
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    right: 0;
+  }
 }

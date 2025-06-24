@@ -78,6 +78,7 @@ export default function Home() {
         style={{
           backgroundImage: `url(${bg.src})`,
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <h1 className={`${style.title} ${janger.className}`}>Remi Henry</h1>
@@ -252,7 +253,7 @@ export default function Home() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Wanna hear back? Add your email"
+              placeholder="Add your email"
             />
           </section>
 

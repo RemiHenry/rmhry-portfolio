@@ -80,3 +80,10 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+@media (max-width: 1280px) {
+  .container {
+    left: 0;
+    transform: translateX(0);
+  }
+}
