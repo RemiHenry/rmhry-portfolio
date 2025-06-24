@@ -6,6 +6,21 @@ import bg from "../images/bg.png";
 import Image from "next/image";
 import React from "react";
 import emailjs from "@emailjs/browser";
+import ExperienceCard from "../components/ExperienceCard/ExperienceCard";
+import picselliaScreenshot from "../images/picsellia-screenshot.png";
+import nemaScreenshot from "../images/nema-screenshot.png";
+import listnScreenshot from "../images/listn-screenshot.png";
+import bleemeoScreenshot from "../images/bleemeo-screenshot.png";
+import epitechScreenshot from "../images/epitech-screenshot.png";
+import lallerSimpleScreenshot from "../images/laller-simple-screenshot.JPG";
+import picselliaLogo from "../images/picsellia-logo.svg";
+import nemaLogo from "../images/nema-logo.svg";
+import listnLogo from "../images/listn-logo.png";
+import bleemeoLogo from "../images/bleemeo-logo.png";
+import epitechLogo from "../images/epitech-logo.svg";
+import lallerSimpleLogo from "../images/laller-simple-logo.svg";
+import portfolioLogo from "../images/portfolio-logo.png";
+import portfolioScreenshot from "../images/portfolio-screenshot.png";
 
 const janger = localFont({
   src: "../fonts/Janger.ttf",
@@ -57,6 +72,92 @@ export default function Home() {
     }
   };
 
+  const experiences = [
+    {
+      logo: picselliaLogo.src,
+      title: "Software Engineer",
+      company: "Picsellia",
+      date: "Jun 2023 – Jun 2025",
+      description:
+        "At Picsellia, I contributed to the development and maintenance of a comprehensive AI lifecycle management platform. I played a key role in implementing an internal UI kit, modernizing the front-end, and streamlining design consistency across the application. I also suggested and integrated new technologies that improved our development workflows and deployment efficiency.",
+      tech: ["VueJS", "TypeScript", "UI Kit", "Figma"],
+      screenshot: picselliaScreenshot.src,
+    },
+    {
+      logo: listnLogo.src,
+      title: "Front-End Developer Intern",
+      company: "Listn",
+      date: "Apr 2022 – Jul 2022",
+      description:
+        " During my internship at Listn, I enhanced the web app's design and overall user experience by redesigning key UI elements. I also participated in the open beta deployment, helping deliver a stable and engaging product for early adopters. This experience sharpened my skills in user feedback integration and iterative development.",
+      tech: ["React", "Figma"],
+      screenshot: listnScreenshot.src,
+    },
+    {
+      logo: bleemeoLogo.src,
+      title: "Mobile Developer Intern",
+      company: "Bleemeo",
+      date: "Oct 2021 – Feb 2022",
+      description:
+        "At Bleemeo, I focused on finalizing and deploying the mobile app to the iOS store. I improved the user interface and optimized the mobile UX, aligning the application with Apple's guidelines and enhancing usability for system monitoring on the go.",
+      tech: ["iOS", "UI/UX"],
+      screenshot: bleemeoScreenshot.src,
+    },
+    {
+      logo: epitechLogo.src,
+      title: "Hub Coordinator",
+      company: "EPITECH",
+      date: "Sep 2021 – Mar 2022",
+      description:
+        "As Hub Coordinator, I managed student projects and ensured the smooth running of educational activities. I supervised peer learning sessions, validated projects, and supported fellow students, building leadership and organizational skills that complement my technical background.",
+      tech: ["Project Management", "Mentorship"],
+      screenshot: epitechScreenshot.src,
+    },
+    {
+      logo: bleemeoLogo.src,
+      title: "Front-End Developer Intern",
+      company: "Bleemeo",
+      date: "Jul 2020 – Dec 2020",
+      description:
+        "In this earlier internship at Bleemeo, I contributed to improving the web app's interface and developed reusable React components to support new features. This role helped deepen my knowledge of scalable component architecture and sharpened my UI/UX sensibility.",
+      tech: ["React", "UI/UX"],
+      screenshot: bleemeoScreenshot.src,
+    },
+  ];
+
+  const projects = [
+    {
+      logo: portfolioLogo.src,
+      title: "Software Engineer & Designer",
+      company: "Remi Henry",
+      date: "Jun 2025",
+      description:
+        "Designed and built my personal portfolio to showcase my projects, skills, and experiences. Developed with Next.js and CSS modules, the site is fully responsive and deployed on Vercel. It features a modern layout with a focus on clarity and performance to provide an engaging user experience.",
+      tech: ["Next.js", "CSS Modules", "Vercel"],
+      screenshot: portfolioScreenshot.src,
+    },
+    {
+      logo: nemaLogo.src,
+      title: "End-of-Studies Project",
+      company: "Nema Studio",
+      date: "Sep 2021 – Aug 2024",
+      description:
+        "Nema Studio was a 3-year end-of-studies project developed by a team of six. Our goal was to build a collaborative, browser-based Digital Audio Workstation—a “Figma for audio.” I led UI/UX design in Figma and developed the front end in Svelte, integrating a Rust-based audio engine via WebAssembly. This project challenged us to innovate across real-time collaboration, web performance, and creative UX.",
+      tech: ["Svelte", "Figma", "Rust", "WebAssembly"],
+      screenshot: nemaScreenshot.src,
+    },
+    {
+      logo: lallerSimpleLogo.src,
+      title: "Freelance Web Developer",
+      company: "L'aller Simple",
+      date: "2023",
+      description:
+        "I designed, developed, and deployed a website for L'aller Simple, a rural holiday cottage. Starting with mockups in Figma, I built a responsive front-end featuring an online booking system. The site also serves as a landing page to highlight the cottage’s charm. This project showcases my ability to deliver an end-to-end web solution that balances usability and design.",
+      tech: ["Next JS", "Figma"],
+      screenshot: lallerSimpleScreenshot.src,
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -81,10 +182,13 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <h1 className={`${style.title} ${janger.className}`}>Remi Henry</h1>
+        <h1 className={`${janger.className}`}>Remi Henry</h1>
       </div>
 
       <div id="about" className={style.about}>
+        <h1 className={`${janger.className} ${style["about-title"]}`}>
+          About Me
+        </h1>
         <div className={style.content}>
           <div>
             <Image
@@ -133,97 +237,24 @@ export default function Home() {
       </div>
 
       <div id="experiences" className={style.experiences}>
+        <h1 className={`${janger.className} ${style["experiences-title"]}`}>
+          Experiences
+        </h1>
         <div className={style.content}>
-          <p className={style.description}>
-            📍 Picsellia – Software Engineer (Jun 2023 – Present)
-            <br />
-            At Picsellia, I contributed to the development and maintenance of a
-            comprehensive AI lifecycle management platform. I played a key role
-            in implementing an internal UI kit, modernizing the front-end, and
-            streamlining design consistency across the application. I also
-            suggested and integrated new technologies that improved our
-            development workflows and deployment efficiency.
-            <br />
-            <br />
-            📍 Listn – Front-End Developer Intern (Apr 2022 – Jul 2022)
-            <br />
-            During my internship at Listn, I enhanced the web app&apos;s design
-            and overall user experience by redesigning key UI elements. I also
-            participated in the open beta deployment, helping deliver a stable
-            and engaging product for early adopters. This experience sharpened
-            my skills in user feedback integration and iterative development.
-            <br />
-            <br />
-            📍 Bleemeo – Mobile Developer Intern (Oct 2021 – Feb 2022)
-            <br />
-            At Bleemeo, I focused on finalizing and deploying the mobile app to
-            the iOS store. I improved the user interface and optimized the
-            mobile UX, aligning the application with Apple&apos;s guidelines and
-            enhancing usability for system monitoring on the go.
-            <br />
-            <br />
-            📍 EPITECH – Hub Coordinator (Sep 2021 – Mar 2022)
-            <br />
-            As Hub Coordinator, I managed student projects and ensured the
-            smooth running of educational activities. I supervised peer learning
-            sessions, validated projects, and supported fellow students,
-            building leadership and organizational skills that complement my
-            technical background.
-            <br />
-            <br />
-            📍 Bleemeo – Front-End Developer Intern (Jul 2020 – Dec 2020)
-            <br />
-            In this earlier internship at Bleemeo, I contributed to improving
-            the web app&apos;s interface and developed reusable React components
-            to support new features. This role helped deepen my knowledge of
-            scalable component architecture and sharpened my UI/UX sensibility.
-          </p>
+          {experiences.map((exp, i) => (
+            <ExperienceCard key={i} {...exp} />
+          ))}
         </div>
       </div>
 
       <div id="projects" className={style.projects}>
+        <h1 className={`${janger.className} ${style["projects-title"]}`}>
+          Projects
+        </h1>
         <div className={style.content}>
-          <p className={style.description}>
-            📍 Nema Studio – End-of-Studies Project
-            <br />
-            Nema Studio was a 3-year collaborative end-of-studies project
-            developed by a team of six students, including myself, with the
-            ambitious goal of creating a next-generation Digital Audio
-            Workstation (DAW). Our vision was to design a tool that would bring
-            live collaboration to music production—a &quot;Figma for
-            audio&quot;—allowing multiple users to compose, edit, and mix music
-            together in real time via the browser.
-            <br />
-            I led the UI/UX design efforts, producing detailed mockups and
-            interaction flows using Figma to ensure a smooth, creative user
-            experience. On the technical side, I developed the front-end
-            interface using Svelte, integrating it with a high-performance audio
-            engine written in Rust and compiled to WebAssembly for browser
-            compatibility. The project pushed us to explore innovative solutions
-            at the intersection of design, web performance, and real-time
-            collaboration.
-            <br />
-            Nema Studio was awarded Best Project on our EPITECH Toulouse campus
-            (out of 6 projects) and later earned the title of Best Project at
-            the national level among 17 EPITECH campuses across France. This
-            recognition marked a highlight of my academic path and underscored
-            the impact of our work both technically and creatively.
-            <br />
-            <br />
-            📍 L&apos;aller Simple – Website Design & Development Project
-            <br />
-            For this personal project, I designed, developed, and deployed a
-            complete website for L&apos;aller Simple, a rural holiday cottage. I
-            began by creating user-focused mockups in Figma to reflect the cozy,
-            inviting atmosphere of the cottage. I then implemented the front-end
-            using responsive web technologies, ensuring a smooth experience
-            across all devices. The site includes a reservation feature,
-            enabling visitors to book their stays directly online, and also acts
-            as a landing page to showcase the property&apos;s key features and
-            visual identity. This project demonstrated my ability to manage an
-            end-to-end web solution—from design to deployment—while balancing
-            functionality and aesthetic appeal.
-          </p>
+          {projects.map((exp, i) => (
+            <ExperienceCard key={i} {...exp} />
+          ))}
         </div>
       </div>
 
