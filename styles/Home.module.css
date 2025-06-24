@@ -12,6 +12,7 @@
 .about {
   width: 100%;
   padding: 0;
+  margin-block: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +38,7 @@
 .experiences {
   width: 100%;
   padding: 0;
+  margin-block: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +60,7 @@
 .projects {
   width: 100%;
   padding: 0;
+  margin-block: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,7 +185,6 @@
 
   .about {
     .content {
-      margin-block: 2rem;
       width: 90%;
       grid-template-columns: 1fr;
       text-align: center;
@@ -195,7 +197,6 @@
 
   .experiences {
     .content {
-      margin-block: 2rem;
       width: 90%;
       grid-template-columns: 1fr;
       text-align: center;
@@ -208,7 +209,6 @@
 
   .projects {
     .content {
-      margin-block: 2rem;
       width: 90%;
       grid-template-columns: 1fr;
       text-align: center;
