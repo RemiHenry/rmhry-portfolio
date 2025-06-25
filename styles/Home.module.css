@@ -12,46 +12,219 @@
 .about {
   width: 100%;
   padding: 0;
-  padding-top: 3rem;
+  padding-block: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
 
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+  }
+
   .about-title {
     font-size: 2rem;
-    margin-bottom: 1rem;
     text-align: center;
     color: #00edfe;
   }
 
-  .content {
-    width: 60%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  .aboutWrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
 
-    .description {
-      text-align: justify;
-      font-size: 1rem;
+    .profileCard {
+      background: linear-gradient(rgb(57, 54, 50), rgb(8, 8, 7));
+      color: rgb(232, 232, 227);
+      border-radius: 1rem;
+      padding: 1.5rem 3rem;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-inline: 4rem;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+      .profileImage {
+        width: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+
+      .resumeButton {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: #00edfe;
+        color: black;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: auto;
+      }
+
+      .mail {
+        font-size: 0.8rem;
+        text-align: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .phone {
+        font-size: 0.8rem;
+        text-align: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .socialIcons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+
+      .description {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      .gpaGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 1rem;
+
+        .gpaCard {
+          display: grid;
+          grid-template-columns: 60px 1fr 60px;
+          align-items: center;
+          padding: 2rem;
+          background: linear-gradient(rgb(57, 54, 50), rgb(8, 8, 7));
+          color: rgb(232, 232, 227);
+          border-radius: 0.75rem;
+          text-align: center;
+
+          .logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+          }
+
+          .gpaCardHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 0.3rem;
+
+            h3 {
+              margin: 0;
+              font-size: 1.4rem;
+            }
+            p {
+              margin: 0;
+              font-size: 0.9rem;
+              color: #777777;
+            }
+          }
+
+          .gpa {
+            p {
+              margin: 0;
+              font-size: 0.9rem;
+              color: #777777;
+            }
+          }
+        }
+      }
+
+      .achievementsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 1rem;
+
+        .achievementCard {
+          display: grid;
+          grid-template-columns: 20px 1fr 40px;
+          gap: 1rem;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2rem;
+          background: linear-gradient(rgb(57, 54, 50), rgb(8, 8, 7));
+          color: rgb(232, 232, 227);
+          border-radius: 0.75rem;
+          text-align: center;
+
+          .achievementCardHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 0.3rem;
+
+            h3 {
+              margin: 0;
+              font-size: 1.4rem;
+            }
+            p {
+              margin: 0;
+              font-size: 0.9rem;
+              color: #777777;
+            }
+          }
+
+          .achievement {
+            display: flex;
+
+            p {
+              margin: 0;
+              font-size: 0.9rem;
+              color: #777777;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 .experiences {
-  width: 100%;
   padding: 0;
   padding-top: 3em;
+  margin-inline: 2rem;
+  /* border radius top */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  background: linear-gradient(0deg, rgb(57, 54, 50), rgb(8, 8, 7));
 
   .experiences-title {
     font-size: 2rem;
@@ -74,14 +247,16 @@
 }
 
 .projects {
-  width: 100%;
   padding: 0;
   padding-block: 3rem;
+  margin-bottom: 2rem;
+  margin-inline: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  background: linear-gradient(0deg, rgb(232, 232, 227), rgb(57, 54, 50));
 
   .projects-title {
     font-size: 2rem;
@@ -208,18 +383,42 @@
   }
 
   .about {
-    .content {
+    .aboutWrapper {
       width: 90%;
-      grid-template-columns: 1fr;
-      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
 
-      .description {
-        font-size: 0.9rem;
+      .profileCard {
+        width: 90%;
+        margin-inline: 0;
+        margin-top: 1rem;
+      }
+
+      .content {
+        width: 90%;
+        text-align: center;
+      }
+
+      .gpaGrid,
+      .achievementsGrid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+      }
+
+      .gpaGrid .gpaCard .gpaCardHeader {
+        align-items: center !important;
+      }
+      .achievementsGrid .achievementCard .achievementCardHeader {
+        align-items: center !important;
       }
     }
   }
 
   .experiences {
+    margin-inline: 1rem;
+
     .content {
       width: 90%;
       grid-template-columns: 1fr;
@@ -232,6 +431,8 @@
   }
 
   .projects {
+    margin-inline: 1rem;
+
     .content {
       width: 90%;
       grid-template-columns: 1fr;

@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import remi from "../images/remi.png";
 import bg from "../images/bg.png";
 import Image from "next/image";
+import Link from "next/link";
+import { Icon } from "@iconify/react";
 import React from "react";
 import emailjs from "@emailjs/browser";
 import ExperienceCard from "../components/ExperienceCard/ExperienceCard";
@@ -21,12 +23,22 @@ import epitechLogo from "../images/epitech-logo.svg";
 import lallerSimpleLogo from "../images/laller-simple-logo.svg";
 import portfolioLogo from "../images/portfolio-logo.png";
 import portfolioScreenshot from "../images/portfolio-screenshot.png";
+import csulbLogo from "../images/csulb-logo.svg";
 
 const janger = localFont({
   src: "../fonts/Janger.ttf",
 });
 
 export default function Home() {
+  const downloadPdf = () => {
+    const link = document.createElement("a");
+    link.href = pdfFile;
+    link.setAttribute("download", "resume_Remi-Henry.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY || "";
   const templateKey = process.env.NEXT_PUBLIC_TEMPLATE_KEY || "";
   const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY || "";
@@ -82,6 +94,7 @@ export default function Home() {
         "At Picsellia, I contributed to the development and maintenance of a comprehensive AI lifecycle management platform. I played a key role in implementing an internal UI kit, modernizing the front-end, and streamlining design consistency across the application. I also suggested and integrated new technologies that improved our development workflows and deployment efficiency.",
       tech: ["VueJS", "TypeScript", "UI Kit", "Figma"],
       screenshot: picselliaScreenshot.src,
+      screenshotUrl: "https://picsellia.com",
     },
     {
       logo: listnLogo.src,
@@ -92,6 +105,7 @@ export default function Home() {
         " During my internship at Listn, I enhanced the web app's design and overall user experience by redesigning key UI elements. I also participated in the open beta deployment, helping deliver a stable and engaging product for early adopters. This experience sharpened my skills in user feedback integration and iterative development.",
       tech: ["React", "Figma"],
       screenshot: listnScreenshot.src,
+      screenshotUrl: "https://pitch.listn.live",
     },
     {
       logo: bleemeoLogo.src,
@@ -102,6 +116,7 @@ export default function Home() {
         "At Bleemeo, I focused on finalizing and deploying the mobile app to the iOS store. I improved the user interface and optimized the mobile UX, aligning the application with Apple's guidelines and enhancing usability for system monitoring on the go.",
       tech: ["iOS", "UI/UX"],
       screenshot: bleemeoScreenshot.src,
+      screenshotUrl: "https://bleemeo.com",
     },
     {
       logo: epitechLogo.src,
@@ -112,6 +127,7 @@ export default function Home() {
         "As Hub Coordinator, I managed student projects and ensured the smooth running of educational activities. I supervised peer learning sessions, validated projects, and supported fellow students, building leadership and organizational skills that complement my technical background.",
       tech: ["Project Management", "Mentorship"],
       screenshot: epitechScreenshot.src,
+      screenshotUrl: "https://www.epitech.eu",
     },
     {
       logo: bleemeoLogo.src,
@@ -122,6 +138,7 @@ export default function Home() {
         "In this earlier internship at Bleemeo, I contributed to improving the web app's interface and developed reusable React components to support new features. This role helped deepen my knowledge of scalable component architecture and sharpened my UI/UX sensibility.",
       tech: ["React", "UI/UX"],
       screenshot: bleemeoScreenshot.src,
+      screenshotUrl: "https://www.bleemeo.com",
     },
   ];
 
@@ -135,6 +152,7 @@ export default function Home() {
         "Designed and built my personal portfolio to showcase my projects, skills, and experiences. Developed with Next.js and CSS modules, the site is fully responsive and deployed on Vercel. It features a modern layout with a focus on clarity and performance to provide an engaging user experience.",
       tech: ["Next.js", "CSS Modules", "Vercel"],
       screenshot: portfolioScreenshot.src,
+      screenshotUrl: "https://remihenry.com",
     },
     {
       logo: nemaLogo.src,
@@ -145,6 +163,7 @@ export default function Home() {
         "Nema Studio was a 3-year end-of-studies project developed by a team of six. Our goal was to build a collaborative, browser-based Digital Audio Workstation—a “Figma for audio.” I led UI/UX design in Figma and developed the front end in Svelte, integrating a Rust-based audio engine via WebAssembly. This project challenged us to innovate across real-time collaboration, web performance, and creative UX.",
       tech: ["Svelte", "Figma", "Rust", "WebAssembly"],
       screenshot: nemaScreenshot.src,
+      screenshotUrl: "https://nemastudio.app",
     },
     {
       logo: lallerSimpleLogo.src,
@@ -189,8 +208,8 @@ export default function Home() {
         <h1 className={`${janger.className} ${style["about-title"]}`}>
           About Me
         </h1>
-        <div className={style.content}>
-          <div>
+        <div className={style.aboutWrapper}>
+          <div className={style.profileCard}>
             <Image
               className={style.avatar}
               src={remi.src}
@@ -199,40 +218,126 @@ export default function Home() {
               style={{ borderRadius: "50%" }}
               alt="Rémi Henry"
             />
-            <h2 className={style.subtitle}>Rémi Henry</h2>
-            <h3 className={style.subtitle}>
-              Software Engineer & UI/UX Designer
-            </h3>
+            <h2>Rémi Henry</h2>
+            <p>Software Engineer & UI/UX Designer</p>
+            <a href="mailto:remi.st@outlook.fr" className={style.mail}>
+              <Icon icon="mdi:email" width="20" height="20" color="white" />
+              remi.st@outlook.fr
+            </a>
+            <p className={style.phone}>
+              <Icon icon="mdi:phone" width="20" height="20" color="white" />
+              (+33) 06.82.63.88.39
+            </p>
+            <div className={style.socialIcons}>
+              <Link
+                href="https://github.com/RemiHenry"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon icon="mdi:github" width="24" height="24" color="white" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/remi-henry/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon="mdi:linkedin"
+                  width="24"
+                  height="24"
+                  color="white"
+                />
+              </Link>
+            </div>
+            <button onClick={downloadPdf} className={style.resumeButton}>
+              Download Resume
+              <Icon
+                icon="octicon:download-16"
+                width={16}
+                height={16}
+                style={{ marginLeft: "8px" }}
+              />
+            </button>
           </div>
-          <p className={style.description}>
-            👋 Hi, I&apos;m Rémi Henry — a passionate Software Engineer and
-            UI/UX Designer with a Master&apos;s in Information Technology from
-            EPITECH and international experience from California State
-            University, Long Beach.
-            <br />
-            <br />
-            With a strong foundation in front-end development and a keen eye for
-            design, I specialize in building modern, user-focused web
-            applications. Over the past few years, I&apos;ve worked with
-            companies like Picsellia, Nema Studio, and Bleemeo, where I
-            contributed to projects involving cutting-edge technologies like
-            React, VueJS, Svelte, and WebAssembly.
-            <br />
-            <br />
-            Beyond code, I care deeply about the user experience, efficient
-            product workflows, and bridging the gap between technical execution
-            and intuitive design. I&apos;m equally comfortable writing clean
-            JavaScript as I am designing in Figma, and I thrive in
-            collaborative, agile environments.
-            <br />
-            <br />
-            Currently open to new opportunities, particularly in roles that
-            combine tech, product thinking, and design — including VIE positions
-            abroad.
-            <br />
-            <br />
-            Let&apos;s build something meaningful together.
-          </p>
+
+          <div className={style.content}>
+            <p className={style.description}>
+              👋 Hi, I&apos;m Rémi Henry — a passionate Software Engineer and
+              UI/UX Designer with a Master&apos;s in Information Technology from
+              EPITECH and international experience from California State
+              University, Long Beach.
+              <br />
+              <br />
+              With a strong foundation in front-end development and a keen eye
+              for design, I specialize in building modern, user-focused web
+              applications. Over the past few years, I&apos;ve worked with
+              companies like Picsellia, Nema Studio, and Bleemeo, where I
+              contributed to projects involving cutting-edge technologies like
+              React, VueJS, Svelte, and WebAssembly.
+              <br />
+              <br />
+              Currently open to new opportunities, particularly in roles that
+              combine tech, product thinking, and design — including VIE
+              positions abroad. Let&apos;s build something meaningful together.
+            </p>
+
+            <div className={style.gpaGrid}>
+              <div className={style.gpaCard}>
+                <img
+                  src={epitechLogo.src}
+                  alt="epitech logo"
+                  className={style.logo}
+                />
+                <div className={style.gpaCardHeader}>
+                  <h3>EPITECH</h3>
+                  <p>Master in IT</p>
+                </div>
+                <div className={style.gpa}>
+                  <h2>3.3</h2>
+                  <p>GPA</p>
+                </div>
+              </div>
+              <div className={style.gpaCard}>
+                <img
+                  src={csulbLogo.src}
+                  alt="CSULB logo"
+                  className={style.logo}
+                />
+                <div className={style.gpaCardHeader}>
+                  <h3>CSU Long Beach</h3>
+                  <p>Exchange</p>
+                </div>
+                <div className={style.gpa}>
+                  <h2>4.0</h2>
+                  <p>GPA</p>
+                </div>
+              </div>
+            </div>
+            <div className={style.achievementsGrid}>
+              <div className={style.achievementCard}>
+                🏆
+                <div className={style.achievementCardHeader}>
+                  <h3>Epitech Toulouse</h3>
+                  <p>Best Innovative Project</p>
+                </div>
+                <div className={style.achievement}>
+                  <h2>1</h2>
+                  <p>st</p>
+                </div>
+              </div>
+              <div className={style.achievementCard}>
+                🏆
+                <div className={style.achievementCardHeader}>
+                  <h3>Epitech France</h3>
+                  <p>Best Innovative Project (17 campuses)</p>
+                </div>
+                <div className={style.achievement}>
+                  <h2>1</h2>
+                  <p>st</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -47,6 +47,10 @@
   line-height: 1.4;
 }
 
+.screenshotLink {
+  align-self: center;
+}
+
 .screenshot {
   flex: 1;
   max-width: 300px;
@@ -82,8 +86,10 @@
     justify-content: center;
   }
 
-  .screenshot {
-    max-height: 200px;
-    margin-top: 1rem;
+  .screenshotLink {
+    .screenshot {
+      max-height: 140px;
+      margin-top: 1rem;
+    }
   }
 }
