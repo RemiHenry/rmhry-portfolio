@@ -30,6 +30,8 @@ const janger = localFont({
 });
 
 export default function Home() {
+  const pdfFile = "/resume_Remi-Henry.pdf";
+
   const downloadPdf = () => {
     const link = document.createElement("a");
     link.href = pdfFile;

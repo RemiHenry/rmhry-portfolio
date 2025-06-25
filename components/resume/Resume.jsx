@@ -1,4 +1,3 @@
-import Link from "next/link";
 import style from "../styles/Resume.module.css";
 import localFont from "next/font/local";
 import { Icon } from "@iconify/react";
