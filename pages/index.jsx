@@ -189,7 +189,7 @@ export default function Home() {
           href="https://fonts.cdnfonts.com/css/janger"
           rel="stylesheet"
         ></link>
-        <link rel="icon" href="%PUBLIC_URL%/rh.ico" />
+        <link rel="icon" href="/rh.ico" />
       </Head>
 
       <div
